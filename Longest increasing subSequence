@@ -1,0 +1,54 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+public class Main {
+    static int LongestIncreasingSubsequenceLength(int v[])
+    {
+        if (v.length == 0) // boundary case
+            return 0;
+ 
+        int[] tail = new int[v.length];
+        int length = 1; // always points empty slot in tail
+        tail[0] = v[0];
+ 
+        for (int i = 1; i < v.length; i++) {
+ 
+            if (v[i] > tail[length - 1]) {
+
+                tail[length++] = v[i];
+            }
+            else {
+                
+                int idx = Arrays.binarySearch(
+                    tail, 0, length - 1, v[i]);
+
+                if (idx < 0)
+                    idx = -1 * idx - 1;
+ 
+                tail[idx] = v[i];
+            }
+        }
+        return length;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[][] = new int[n][2];
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < n; j++) {
+                a[j][i] = sc.nextInt();
+            }
+        }
+        Arrays.sort(a, (c, b) -> {
+            return c[0] - b[0];
+        });
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=a[i][1];
+        }
+        int m = LongestIncreasingSubsequenceLength(arr);
+        System.out.println(m + n);
+ 
+    }
+}
