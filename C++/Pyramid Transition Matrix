@@ -1,0 +1,50 @@
+class Solution {
+public:
+    bool pyramidTransition(string bottom, vector<string>& allowed) {
+        unordered_map<string, vector<char>> mapping;
+        for (const string& s : allowed)
+        {
+            mapping[s.substr(0, 2)].push_back(s[2]);
+        }
+
+        return dfs(bottom, "", mapping);
+    }
+    
+private:
+    unordered_map<string, bool> memo;
+    bool dfs(string bottom, string top, unordered_map<string, vector<char>>& mapping)
+    {
+        if (bottom.size() == 2 && top.size() == 1)
+        {
+            return true;
+        }
+        
+        if (memo.count(bottom))
+            return memo[bottom];
+        
+        if (bottom.size() - top.size() == 1)
+        {
+            bool result = dfs(top, "", mapping);
+            memo[top] = result;
+            return result;
+        }
+        
+        string sub = bottom.substr(top.size(), 2);
+        if (mapping.count(sub) == 0)
+            return false;
+        
+        for (char c : mapping[sub])
+        {
+            bool result = dfs(bottom, top + c, mapping);
+            if (result)
+            {
+                memo[bottom] = true;
+                return true;
+            }
+                
+        }
+        
+        memo[bottom] = false;
+        return false;
+    }
+};
