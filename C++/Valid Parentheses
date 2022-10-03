@@ -1,0 +1,60 @@
+class Solution {
+public:
+    bool isValid(string s) {
+        long int n=s.size();
+	   stack<char> str;
+	   char x;
+
+	   // Traversing the Expression
+	   for(int i=0;i<n;i++)
+	   {
+           
+		    if (s[i] == '(' || s[i] == '[' || s[i] == '{')
+		    {
+                
+			    // Push the element in the stack
+			    str.push(s[i]);
+			    continue;
+		     }
+
+		     // IF current current character is not opening
+		    // bracket, then it must be closing. So stack
+		    // cannot be empty at this point.
+		    if (str.empty())
+			    return false;
+
+		   switch (s[i]) { 
+                   
+		           case ')':
+                   
+			       // Store the top element in a
+			        x = str.top();
+			        str.pop();
+			        if (x == '{' || x == '[')
+				         return false;
+			             break;
+
+		           case '}':
+
+		       	   // Store the top element in b
+			       x = str.top();
+			       str.pop();
+			       if (x == '(' || x == '[')
+				       return false;
+			       break;
+
+		          case ']':
+
+			       // Store the top element in c
+			       x = str.top();
+			       str.pop();
+			       if (x == '(' || x == '{')
+				       return false;
+			       break;
+		       }
+	       }
+
+	       // Check Empty Stack
+	       return (str.empty());
+    }
+};
