@@ -29,7 +29,7 @@
    Bio : Student
    GitHub URL : https://github.com/AdarshKashyap14
 
-4) Name : 
-   Place : 
-   Bio : 
-   GitHub URL : 
+7) Name : Jakub Jelinek
+   Place : Slovakia
+   Bio : Student
+   GitHub URL : https://github.com/jakubkoje
