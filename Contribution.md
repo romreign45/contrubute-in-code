@@ -33,3 +33,8 @@
    Place : Slovakia
    Bio : Student
    GitHub URL : https://github.com/jakubkoje
+   
+8) Name : Vrushang Parikh
+   Place : Kathlal, Gujarat, India
+   Bio : Student
+   GitHub URL : https://github.com/vrup0408
