@@ -1,7 +1,7 @@
-1) Name : Srajan Agrawal
+1) Name : Shahnawaz Khan
    Place : Kanpur, UP , India
    Bio : Student
-   GitHub URL : https://github.com/SrajanAgrawal
+   GitHub URL : https://github.com/romreign45
   
 
 2) Name : Ratnesh Maurya
