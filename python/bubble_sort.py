@@ -10,3 +10,6 @@ def bubblesort(elements):
         if not swapped:
            
             return
+Time Complexity:  O(n2). However in practice, this optimized version might take less time as when array gets sorted, function would return.
+
+ Space Complexity : O(1).
