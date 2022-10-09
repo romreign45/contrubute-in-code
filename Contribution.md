@@ -38,3 +38,8 @@
    Place : Kathlal, Gujarat, India
    Bio : Student
    GitHub URL : https://github.com/vrup0408
+
+9) Name : Pushkar Ambastha
+   Place : Patna, Bihar, India
+   Bio : Student
+   GitHub URL : https://github.com/Pushkar1853
