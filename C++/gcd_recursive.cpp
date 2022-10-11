@@ -1,3 +1,9 @@
+/*
+
+Space complexity -> O(1)
+Time complexity -> O(log(min(a,b)))
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
