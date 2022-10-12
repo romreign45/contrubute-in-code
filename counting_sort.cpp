@@ -39,6 +39,8 @@ void countSort(int array[], int size) {
   }
 }
 
+//Time complexity: O(N+K)
+//Space Complexity: O(K)
 
 void printArray(int array[], int size) {
   for (int i = 0; i < size; i++)
