@@ -12,3 +12,8 @@
    Place : Kathlal, Gujarat, India
    Bio : Student
    GitHub URL : https://github.com/vrup0408
+   
+4) Name : Anuj Kumar Maurya
+   Place : Prayagraj, Uttar Pradesh, India
+   Bio : Student
+   GitHub URL : https://github.com/Anujkumar2017
